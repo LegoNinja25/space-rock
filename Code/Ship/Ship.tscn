@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dhmmlqnos0d8n"]
+
+[sub_resource type="GDScript" id="GDScript_3mtch"]
+script/source = "extends Node2D
+class_name Ship
+
+var turn_spd = 180
+
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+func _process(delta: float) -> void:
+	if Input.is_action_pressed(\"turn_ccw\"):
+		rotation_degrees -= turn_spd * delta
+	if Input.is_action_pressed(\"turn_cw\"):
+		rotation_degrees += turn_spd * delta
+#missing controls: fire, thrust, rapidfire
+"
+
+[node name="Ship" type="Node2D" unique_id=1788163164]
+script = SubResource("GDScript_3mtch")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1476789543]
+color = Color(0.24290884, 0.88206965, 0.9108876, 1)
+polygon = PackedVector2Array(1.6310425, -85.023026, 62.856995, 49.40799, 0.30004883, 24.118988, -50.277954, 48.07698)
+
+[node name="Polygon2D" type="Polygon2D" parent="Polygon2D" unique_id=1635800365]
+color = Color(0.06818461, 0.06978515, 0.21432596, 1)
+polygon = PackedVector2Array(2, -10, 40, -6, 36, -18, 1, -22, -26, -17, -31, -4)
