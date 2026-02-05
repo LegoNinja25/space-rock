@@ -9,14 +9,13 @@
 script = ExtResource("1")
 
 [node name="Rock" parent="." unique_id=1982824534 instance=ExtResource("2_83ytx")]
-position = Vector2(220, 349)
+position = Vector2(367, 246)
 
 [node name="Rock2" parent="." unique_id=1051563987 instance=ExtResource("2_83ytx")]
-position = Vector2(854, 239)
+position = Vector2(709, 254)
 
 [node name="Ship" parent="." unique_id=1788163164 instance=ExtResource("3_amygn")]
 position = Vector2(579, 392)
 
 [node name="Bullet" parent="." unique_id=614898232 instance=ExtResource("4_ps1la")]
 position = Vector2(514, 313)
-rotation = 6.2831855

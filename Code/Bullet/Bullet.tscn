@@ -8,5 +8,5 @@ script = ExtResource("1_qratc")
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=2007389338]
 position = Vector2(0.3543391, 0.7716932)
 scale = Vector2(0.58367777, 0.5836777)
-color = Color(0.8864634, 0.12069652, 9.62615e-08, 1)
+color = Color(0, 1, 0.09803922, 1)
 polygon = PackedVector2Array(0.60000044, 33.799995, 7.2, 0.79999924, 13.799999, -12.4, 0.60000044, -27.8, -12.599998, -12.4, -5.999999, 0.79999924)

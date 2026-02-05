@@ -1,4 +1,4 @@
-extends Node2D
+extends ScreenWrapper
 class_name Bullet
 
 var ship: Ship
@@ -10,5 +10,6 @@ var speed = 500 #500 is good speed, 120 speed for testing
 
 
 func _process(delta: float) -> void:
+	super._process(delta)
 	var direction = Vector2(sin(rotation), -cos(rotation))
 	position += direction * speed * delta
