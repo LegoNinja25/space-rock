@@ -1,11 +1,32 @@
 [gd_scene format=3 uid="uid://duiesnqf505sd"]
 
 [ext_resource type="Script" uid="uid://b2mkb7rppk6pj" path="res://Rock/Rock.gd" id="1_wuppp"]
+[ext_resource type="Texture2D" uid="uid://cokxhjufvrjg4" path="res://Rock/Assets/rock_A.png" id="2_751ln"]
+[ext_resource type="Texture2D" uid="uid://c3vnyxufy3f3n" path="res://Rock/Assets/rock_B.png" id="3_c4a8t"]
+[ext_resource type="Texture2D" uid="uid://bqgttxxnlnb6m" path="res://Rock/Assets/rock_C.png" id="4_ru0k0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m1swu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_751ln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c4a8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ru0k0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Rock" type="Node2D" unique_id=1982824534]
 script = ExtResource("1_wuppp")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=769636625]
+visible = false
 position = Vector2(3.8146973e-06, 3.8146973e-06)
 scale = Vector2(0.77862597, 0.77862597)
 color = Color(0.71531194, 0.34062025, 0.08819384, 1)
@@ -16,3 +37,8 @@ uv = PackedVector2Array(-90, -42, -50, -73, 11, -77, 48, -64, 31, -43, 15, -43, 
 position = Vector2(6, 3)
 color = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
 polygon = PackedVector2Array(-93, -7, 99, -21, 114, 4, 96, -13, 65, -8, 58, 21, 27, 21, 18, 3, -6, 6, -12, 22, -41, 20, -56, 1, -87, 5, -103, 25)
+
+[node name="Sprites" type="AnimatedSprite2D" parent="." unique_id=1966463782]
+texture_filter = 1
+scale = Vector2(6.5, 6.5000005)
+sprite_frames = SubResource("SpriteFrames_m1swu")

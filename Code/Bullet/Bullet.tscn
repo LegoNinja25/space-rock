@@ -1,12 +1,20 @@
 [gd_scene format=3 uid="uid://db3otv5j2cbxb"]
 
 [ext_resource type="Script" uid="uid://b3bidixqrwjxb" path="res://Bullet/Bullet.gd" id="1_qratc"]
+[ext_resource type="Texture2D" uid="uid://c28271uior52c" path="res://Bullet/Assets/missle.png" id="2_v7qj8"]
 
 [node name="Bullet" type="Node2D" unique_id=614898232]
 script = ExtResource("1_qratc")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=2007389338]
+visible = false
 position = Vector2(0.3543391, 0.7716932)
 scale = Vector2(0.58367777, 0.5836777)
 color = Color(0, 1, 0.09803922, 1)
 polygon = PackedVector2Array(0.60000044, 33.799995, 7.2, 0.79999924, 13.799999, -12.4, 0.60000044, -27.8, -12.599998, -12.4, -5.999999, 0.79999924)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=905306026]
+texture_filter = 1
+position = Vector2(0, 8)
+scale = Vector2(1.75, 1.6099997)
+texture = ExtResource("2_v7qj8")
