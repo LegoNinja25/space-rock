@@ -44,4 +44,7 @@ func _process(delta: float) -> void:
 		#print("pewpew")
 		
 	position += velocity * delta
-	super._process(delta)
+	super._process(delta) # need to screenwrap
+
+func destroy():
+	queue_free()

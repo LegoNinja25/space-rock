@@ -3,7 +3,13 @@
 [ext_resource type="Script" uid="uid://b3bidixqrwjxb" path="res://Bullet/Bullet.gd" id="1_qratc"]
 [ext_resource type="Texture2D" uid="uid://c28271uior52c" path="res://Bullet/Assets/missle.png" id="2_v7qj8"]
 
-[node name="Bullet" type="Node2D" unique_id=614898232]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7qj8"]
+size = Vector2(10, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kamwa"]
+size = Vector2(16, 5)
+
+[node name="Bullet" type="Area2D" unique_id=1469673622]
 script = ExtResource("1_qratc")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=2007389338]
@@ -18,3 +24,15 @@ texture_filter = 1
 position = Vector2(0, 8)
 scale = Vector2(1.75, 1.6099997)
 texture = ExtResource("2_v7qj8")
+
+[node name="Timer" type="Timer" parent="." unique_id=1381144853]
+wait_time = 1.25
+autostart = true
+
+[node name="Bodyhitbox" type="CollisionShape2D" parent="." unique_id=164212795]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_v7qj8")
+
+[node name="Winghitbox" type="CollisionShape2D" parent="." unique_id=1717544777]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_kamwa")

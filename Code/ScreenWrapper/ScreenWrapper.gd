@@ -1,7 +1,7 @@
-extends Node2D
+extends Area2D
 class_name ScreenWrapper
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# screen wrap
 	if position.x > get_viewport().size.x:
 		position.x = 0
