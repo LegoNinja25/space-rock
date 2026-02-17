@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://bpi51limxqldb"]
 
 [ext_resource type="Script" uid="uid://bx3h3mk5eqpnr" path="res://Player/Player.gd" id="1_q3lat"]
-[ext_resource type="Texture2D" uid="uid://dwdmaweg3fytc" path="res://Ship/Assets/spaceship.png" id="2_tok1r"]
+[ext_resource type="PackedScene" uid="uid://duiesnqf505sd" path="res://Rock/Rock.tscn" id="2_ddoul"]
+[ext_resource type="PackedScene" uid="uid://db3otv5j2cbxb" path="res://Bullet/Bullet.tscn" id="3_8g4oa"]
+[ext_resource type="PackedScene" uid="uid://dhmmlqnos0d8n" path="res://Ship/Ship.tscn" id="4_6ysni"]
 
 [node name="Player" type="PanelContainer" unique_id=101304975]
-offset_right = 225.0
-offset_bottom = 59.0
+offset_right = 115.0
+offset_bottom = 56.0
 script = ExtResource("1_q3lat")
 
 [node name="VBox" type="VBoxContainer" parent="." unique_id=121073532]
@@ -13,22 +15,17 @@ layout_mode = 2
 
 [node name="Score UI" type="Label" parent="VBox" unique_id=1490381819]
 layout_mode = 2
-text = " SCORE: 0123456789"
+text = "0"
 
 [node name="Lives UI" type="HBoxContainer" parent="VBox" unique_id=1024549414]
 layout_mode = 2
 
-[node name="Life" type="TextureRect" parent="VBox/Lives UI" unique_id=152336259]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_tok1r")
+[node name="Rock" parent="VBox" unique_id=1626286833 instance=ExtResource("2_ddoul")]
+position = Vector2(302, 343)
+speed = 200.0
 
-[node name="Life2" type="TextureRect" parent="VBox/Lives UI" unique_id=98323563]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_tok1r")
+[node name="Bullet" parent="VBox" unique_id=1469673622 instance=ExtResource("3_8g4oa")]
+position = Vector2(250, 349)
 
-[node name="Life3" type="TextureRect" parent="VBox/Lives UI" unique_id=1299021885]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("2_tok1r")
+[node name="Ship" parent="VBox" unique_id=1733280881 instance=ExtResource("4_6ysni")]
+position = Vector2(316, 354)

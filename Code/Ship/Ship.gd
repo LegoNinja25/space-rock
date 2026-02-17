@@ -5,6 +5,7 @@ class_name Ship
 const BULLET = preload("res://Bullet/Bullet.tscn")
 @onready var flame: Polygon2D = $Flame
 
+var player: Player
 
 var thrust_pwr: float = 250
 var turn_spd: float = 250
@@ -31,6 +32,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("fire"):
 		#spawn bullet, pos, ....
 		var bullet: Bullet = BULLET.instantiate()
+		bullet.ship = self
 		bullet.rotation = self.rotation
 		bullet.position = self.position
 		self.get_parent().add_child(bullet)
@@ -38,6 +40,7 @@ func _process(delta: float) -> void:
 
 	#if Input.is_action_just_pressed("rapidfire"):
 		#var bullet: Bullet = BULLET.instantiate()
+		#bullet.ship = self
 		#bullet.rotation = self.rotation
 		#bullet.position = self.position
 		#self.get_parent().add_child(bullet)
@@ -47,4 +50,5 @@ func _process(delta: float) -> void:
 	super._process(delta) # need to screenwrap
 
 func destroy():
+	player.ship = null
 	queue_free()

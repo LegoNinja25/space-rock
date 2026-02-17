@@ -31,9 +31,12 @@ func destroy():
 func on_area_entered(other_area: Area2D):
 	print(other_area)
 	if other_area is Bullet:
+#		FIXME: crashes when ship and rock are both destroyed
+#		currently in "Main" a ship, rock, and bullet all ocuppy the same space
+		other_area.ship.player.update_score(20)
 		other_area.destroy()
-		destroy()
+		self.destroy()
 
-	if other_area is Ship:
+	elif other_area is Ship:
 		other_area.destroy()
 		
