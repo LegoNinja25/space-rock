@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bytdcuvxqwibi"]
+
+[ext_resource type="Script" uid="uid://dd0cix7datup6" path="res://Main/PauseMenu/PauseMenu.gd" id="1_86arr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86arr"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0, 0, 0, 1)
+
+[node name="PauseMenu" type="PanelContainer" unique_id=699309485]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.66669
+offset_top = -56.0
+offset_right = 98.66669
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_86arr")
+script = ExtResource("1_86arr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1952475216]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=607085577]
+layout_mode = 2
+text = "Play"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1755689554]
+layout_mode = 2
+text = "Quit"

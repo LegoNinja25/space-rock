@@ -3,7 +3,7 @@ class_name Bullet
 
 @onready var timer: Timer = $Timer
 
-var ship: Ship
+var player: Player
 var speed = 500 #500 is good speed, 120 speed for testing
 
 

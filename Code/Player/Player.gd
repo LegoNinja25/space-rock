@@ -24,13 +24,14 @@ func _process(_delta: float) -> void:
 
 func launch_ship():
 	if ship == null:
-		update_lives(-1)
-		ship = SHIP.instantiate()
-		ship.player = self
-		ship.position = get_viewport().size * 0.50
-		add_child(ship)
+		if lives != 0:
+			update_lives(-1)
+			ship = SHIP.instantiate()
+			ship.player = self
+			ship.position = get_viewport().size * 0.50
+			add_child(ship)
 
-#TODO test later
+
 func update_score(delta_score):
 	score += delta_score
 	if score >= 100000:
@@ -39,7 +40,7 @@ func update_score(delta_score):
 	
 func update_lives(delta_lives):
 	lives += delta_lives
-	print("Lives: ", lives)
+	#print("Lives: ", lives)
 	
 	for life in lives_ui.get_children():
 		life.queue_free()

@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("fire"):
 		#spawn bullet, pos, ....
 		var bullet: Bullet = BULLET.instantiate()
-		bullet.ship = self
+		bullet.player = self.player
 		bullet.rotation = self.rotation
 		bullet.position = self.position
 		self.get_parent().add_child(bullet)
@@ -40,12 +40,12 @@ func _process(delta: float) -> void:
 
 	#if Input.is_action_just_pressed("rapidfire"):
 		#var bullet: Bullet = BULLET.instantiate()
-		#bullet.ship = self
+		#bullet.player = self.player
 		#bullet.rotation = self.rotation
 		#bullet.position = self.position
 		#self.get_parent().add_child(bullet)
 		#print("pewpew")
-		
+		#
 	position += velocity * delta
 	super._process(delta) # need to screenwrap
 

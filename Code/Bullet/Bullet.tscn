@@ -26,7 +26,7 @@ scale = Vector2(1.75, 1.6099997)
 texture = ExtResource("2_v7qj8")
 
 [node name="Timer" type="Timer" parent="." unique_id=1381144853]
-wait_time = 1.25
+wait_time = 0.75
 autostart = true
 
 [node name="Bodyhitbox" type="CollisionShape2D" parent="." unique_id=164212795]
