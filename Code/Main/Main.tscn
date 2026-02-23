@@ -14,3 +14,7 @@ offset_left = -76.0
 offset_top = -49.0
 offset_right = 72.0
 offset_bottom = 41.0
+
+[node name="UfoTimer" type="Timer" parent="." unique_id=23535107]
+wait_time = 5.0
+autostart = true

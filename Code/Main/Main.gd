@@ -2,13 +2,23 @@ extends Node
 class_name Main
 
 const ROCK = preload("res://Rock/Rock.tscn")
+const UFO = preload("res://UFO/UFO.tscn")
+
+@onready var ufo_timer: Timer = $UfoTimer
 
 var spawn_count: int = 3
 var rocks: Array[Rock]
 
 
 func _ready() -> void:
+	ufo_timer.timeout.connect(spawn_ufo)
 	spawn_rocks(spawn_count)
+	spawn_ufo()
+
+func spawn_ufo():
+	var ufo: = UFO.instantiate()
+	add_child(ufo)
+
 
 func spawn_rocks(count: int):
 	for i in count:
