@@ -30,7 +30,7 @@ func destroy():
 	queue_free()
 
 func on_up_down():
-	if velocity.y != 0.0:
+	if velocity.y == 0.0:
 		if randi() % 2:
 			velocity.y = speed
 		else:

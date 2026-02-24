@@ -21,5 +21,5 @@ rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_yqxwc")
 
 [node name="UpDownTimer" type="Timer" parent="." unique_id=1921813813]
-wait_time = 1.5
+wait_time = 0.75
 autostart = true
