@@ -23,3 +23,7 @@ shape = SubResource("CapsuleShape2D_yqxwc")
 [node name="UpDownTimer" type="Timer" parent="." unique_id=1921813813]
 wait_time = 0.75
 autostart = true
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=748220127]
+wait_time = 0.35
+autostart = true

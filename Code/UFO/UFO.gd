@@ -1,6 +1,9 @@
 extends Area2D
 class_name UFO
 
+const BULLET = preload("res://Bullet/Bullet.tscn")
+
+@onready var shoot_timer: Timer = $ShootTimer
 @onready var up_down_timer: Timer = $UpDownTimer
 
 var speed: float = 150 #pixels per second
@@ -9,6 +12,7 @@ var velocity: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	up_down_timer.timeout.connect(on_up_down)
+	shoot_timer.timeout.connect(on_shoot)
 	
 	if randi() % 2:
 		position.x = 0
@@ -18,6 +22,11 @@ func _ready() -> void:
 		velocity.x = speed * -1
 	position.y = randi_range(0, get_viewport().size.y)
 
+func on_shoot():
+	var bullet = BULLET.instantiate()
+	bullet.position = position
+	bullet.rotation_degrees = randf_range(0, 360)
+	get_parent().add_child(bullet)
 
 func _process(delta: float) -> void:
 	position += velocity * delta
