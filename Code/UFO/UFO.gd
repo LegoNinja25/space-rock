@@ -3,7 +3,7 @@ class_name UFO
 
 @onready var up_down_timer: Timer = $UpDownTimer
 
-var speed: float = 300 #pixels per second
+var speed: float = 150 #pixels per second
 var going_right: bool = false  
 var velocity: Vector2 = Vector2.ZERO
 
@@ -25,6 +25,13 @@ func _process(delta: float) -> void:
 		destroy()
 	if position.x < 0:
 		destroy()
+	
+	if position.y > get_viewport().size.y:
+		position.y = 0
+	elif position.y < 0:
+		position.y = get_viewport().size.y
+	
+
 
 func destroy():
 	queue_free()
