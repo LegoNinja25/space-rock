@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://biehskg2qpme5"]
 
 [ext_resource type="Script" uid="uid://du4tg6insl2k6" path="res://UFO/UFO.gd" id="1_7cik0"]
+[ext_resource type="Texture2D" uid="uid://cwr1fax0tjbqa" path="res://UFO/assets/ufo.png" id="2_dw4pw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yqxwc"]
 radius = 17.0
@@ -27,3 +28,10 @@ autostart = true
 [node name="ShootTimer" type="Timer" parent="." unique_id=748220127]
 wait_time = 0.35
 autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2071928162]
+
+[node name="Ufo2" type="Sprite2D" parent="." unique_id=530354026]
+position = Vector2(0, 7)
+scale = Vector2(0.05000002, 0.050000004)
+texture = ExtResource("2_dw4pw")
