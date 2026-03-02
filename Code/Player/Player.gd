@@ -41,7 +41,12 @@ func update_score(delta_score):
 func update_lives(delta_lives):
 	lives += delta_lives
 	#print("Lives: ", lives)
-	
+
+
+
+
+
+
 	for life in lives_ui.get_children():
 		life.queue_free()
 	

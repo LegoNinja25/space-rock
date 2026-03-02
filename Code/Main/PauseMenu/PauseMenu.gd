@@ -19,3 +19,10 @@ func on_play_pressed():
 	hide()
 func on_quit_pressed():
 	get_tree().quit()
+
+#TODO: move this out of main? and this stuff? vvv
+#func other_play_pressed():
+	#var main: Main = get_parent()
+	#main.spawn_rocks(3)
+	#main.launch_ship()
+	#hide()

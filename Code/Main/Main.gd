@@ -27,6 +27,7 @@ func spawn_rocks(count: int):
 		rocks.append(rock)
 	print("Rocks", rocks)
 
+
 func is_game_over() -> bool:
 	if rocks.is_empty():
 		return true
