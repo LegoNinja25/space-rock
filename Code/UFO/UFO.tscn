@@ -26,7 +26,6 @@ wait_time = 0.75
 autostart = true
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=748220127]
-wait_time = 0.35
 autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2071928162]

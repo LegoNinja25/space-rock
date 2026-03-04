@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpi51limxqldb"]
 
 [ext_resource type="Script" uid="uid://bx3h3mk5eqpnr" path="res://Player/Player.gd" id="1_q3lat"]
+[ext_resource type="PackedScene" uid="uid://bndkititp6kx3" path="res://Player/assets/life.tscn" id="2_q3lat"]
 
 [node name="Player" type="PanelContainer" unique_id=101304975]
 offset_right = 115.0
@@ -12,7 +13,17 @@ layout_mode = 2
 
 [node name="Score UI" type="Label" parent="VBox" unique_id=1490381819]
 layout_mode = 2
-text = "0"
+text = "Press S launch"
 
 [node name="Lives UI" type="HBoxContainer" parent="VBox" unique_id=1024549414]
 layout_mode = 2
+
+[node name="Life" parent="VBox/Lives UI" unique_id=886152480 instance=ExtResource("2_q3lat")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox" unique_id=970355410]
+layout_mode = 2
+text = "S : Launch Ship
+W : Thrust
+A, D : Turn
+Space : Fire"
