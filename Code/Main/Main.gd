@@ -35,11 +35,15 @@ func spawn_rocks(count: int):
 		rocks.append(rock)
 	print("Rocks", rocks)
 
+func check_round_over():
+	#if rock.size() < 1:
+		
+	pass
 
-func is_game_over() -> bool:
-	if rocks.is_empty():
-		return true
-	return false
+#func is_game_over() -> bool:
+	#if rocks.is_empty():
+		#return true
+	#return false
 
 func toggle_pause():
 	pass
